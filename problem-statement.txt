@@ -3,7 +3,7 @@ opendata-daai/ac_diag_data
 Problem Statement:
 Data is collected from users using AC which is connected to the company’s cloud and is stored within a database. Whenever the user’s AC is connected to the internet through IoT the data from the sensors are cached and sent at a certain frequency. All the features with their timestamp and device Id is stored. As data is collected from many users at different points of time with possibly missing values it is important to clean the data and bring it to a format that will be helpful for our analysis.  We are interested in understanding how the candidate will use the data "open-ac-diag-data-sample-dataset.csv" and perform the below:
 
-1) Use usertemp , roomtemp and operatinghours to understand how much time has elapsed for the device to reach from roomtemp to 80% of usertemp [CODE EXPECTED]
+1) Use usertemp , roomtemp and operatinghours to understand how much time has elapsed for the device to reach from roomtemp to 80% of usertemp [CODE EXPECTED] 
 2) Perform EDA on that full dataset and share any userful insights
 
 The candidate is expected to use pyspark/python to handle the above and choice of ML algorithms (if required) is left to the candidate.
@@ -14,4 +14,5 @@ Points to note:
 1) when there is no change in operating hours, then it means that AC is not on
 2) operating hours is time in sec and cumulative value since the AC is turned on  (like a car or bike odometer)
 3) usertemp, roomtemp,outdoorairtemp can be offset to -60 if the value is over 30  eg: if roomtemp is 85, then 85-60 = 25 is the value to be used for analysis
+4) 80% means - when user set temp is 18C room temp should atleast reach 21.6C and what time is taken to reach this
 
